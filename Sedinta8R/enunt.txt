@@ -1,0 +1,32 @@
+SQL curs 8
+
+Aplicatii:
+Se considera o tabela cu persoane. Coloane: Nume, DoB, Discount
+- se defineste o functie de generare a unei date de nastere aleatoare, care primeste ca argument varsta minima si maxima: 
+	genereazaData(varstaMin INT,varstaMax INT). Varsta primita ca parametru este exprimata in ani; 
+	data de nastere va fi generata in mod aleator cu precizie de o zi in intervalul cerut
+- se foloseste functia anterioara pentru a popula coloana DoB
+- se defineste o functie care calculeaza varsta in ani a unei persoane pe baza datei de nastere: 
+	varsta(DoB DATE). Se foloseste functia pentru a verifica daca generarea datei de nastere de la punctul anterior 
+	a fost facuta corect
+- se defineste un trigger care asigura popularea automata a coloanei DoB prin apelarea functiei genereazaData(). 
+	Atentie! Coloana DoB trebuie populata cu o valoare aleatoare numai atunci cand la operatia de INSERT nu 
+	a fost specificata valoarea coloanei!
+- se defineste o functie discount(varsta INT) care calculeaza discount-ul aplicat persoanei in functie de varsta, dupa regula:
+	+ copiii sub 5 ani au reducere 50%
+	+ elevii (<18 ani) discount 30%
+	+ persoanele peste 60 de ani reducere 60%
+	+ ceilalti au reducere 20%
+- se populeaza coloana discount folosind functia anterioara
+- se asigura completarea automata a campului de discount la introducerea unei noi inregistrari, 
+	atasand un trigger tabelei cu persoane
+
+- validarea datei de nastere pentru o persoana nou introdusa:
+- se defineste functia zileperluna(luna,an) care returneaza numarul de zile ale lunii respective
+- se defineste functia validaredata(data CHAR(10)) care se foloseste de zileperluna() pentru a valida data. Operatii:
+- se sparge data in substring-uri pt a determina an, luna si zi
+- se pun conditiile necesare pt an, luna si zi
+- se defineste un trigger la insert si update pentru coloana de data in tabela cu persoane
+
+(AVANSATI)
+- se defineste o procedura care produce varsta exacta, in ani, luni si zile (3 parametri de tip OUT!) pornind de la data de nastere
