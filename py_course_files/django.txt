@@ -1,4 +1,0 @@
-https://www.freecodecamp.org/news/python-django-course/
-https://learning.oreilly.com/library/view/django-3-by/9781838981952/
-https://learning.oreilly.com/videos/django-a-z-learn/9781839213960
-https://www.freecodecamp.org/news/here-are-380-ivy-league-courses-you-can-take-online-right-now-for-free-9b3ffcbd7b8c/?fbclid=IwAR0Vmmg2LdTP0D7PjyRRkLYkAG7Kbxp3zlpGkUsy4uAPlYaPaP9bLrRjJYA
